@@ -16,3 +16,6 @@ c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\M
 c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\Microsoft.WindowsAPICodePack.xml
 c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\HumanBytes.dll
+c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\HumanBytes.xml
+c:\users\angpy\documents\visual studio 2017\Projects\TestApp\TestApp\bin\Debug\fr\HumanBytes.resources.dll

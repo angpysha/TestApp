@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HumanBytes;
 
 namespace TestApp
 {
@@ -34,7 +35,7 @@ namespace TestApp
                         {
                             FileName = info1.Name,
                             FileDate = info1.LastWriteTime.ToShortDateString(),
-                            FileSize = info1.Length.ToString(),
+                            FileSize = FormatSize(info1.Length),
                             FileStatus = FileStatus.ExistsInFirstForlder
                         });
                   //  }
@@ -49,7 +50,7 @@ namespace TestApp
                     {
                         FileName = info2.Name,
                         FileDate = info2.LastWriteTime.ToShortDateString(),
-                        FileSize = info2.Length.ToString(),
+                        FileSize = FormatSize(info2.Length),
                         FileStatus = FileStatus.ExistsInSecondFolder
                     });
                 }
@@ -62,7 +63,7 @@ namespace TestApp
                         {
                             FileName = info2.Name,
                             FileDate = info2.LastWriteTime.ToShortDateString(),
-                            FileSize = info2.Length.ToString(),
+                            FileSize = FormatSize(info2.Length),
                             FileStatus = FileStatus.ExistsInTwoFolders
                         });
                     }
@@ -72,7 +73,7 @@ namespace TestApp
                         {
                             FileName = info2.Name,
                             FileDate = info2.LastWriteTime.ToShortDateString(),
-                            FileSize = info2.Length.ToString(),
+                            FileSize = FormatSize(info2.Length),
                             FileStatus = FileStatus.ExistsInTwoFoldersDiffSize
                         });
 
@@ -80,7 +81,7 @@ namespace TestApp
                         {
                             FileName = info1_t.Name,
                             FileDate = info1_t.LastWriteTime.ToShortDateString(),
-                            FileSize = info1_t.Length.ToString(),
+                            FileSize = FormatSize(info1_t.Length),
                             FileStatus = FileStatus.ExistsInTwoFoldersDiffSize
                         });
                     }
@@ -91,6 +92,22 @@ namespace TestApp
         public ObservableCollection<FileModel> getData()
         {
             return this.fileModels;
+        }
+
+        public string FormatSize(double size)
+        {
+            var formatter = new ByteSizeFormatter
+            {
+                Convention = ByteSizeConvention.Binary,
+                DecimalPlaces = 1,
+                NumberFormat = "#,##0.###",
+                MinUnit = ByteSizeUnit.Kilobyte,
+                MaxUnit = ByteSizeUnit.Gigabyte,
+                RoundingRule = ByteSizeRounding.Closest,
+                UseFullWordForBytes = true,
+            };
+
+            return formatter.Format((long) size);
         }
 
     }

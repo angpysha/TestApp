@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HumanBytes</name>
+    </assembly>
+    <members>
+        <member name="T:HumanBytes.ByteSize">
+            <summary>
+            Represents a size in bytes.
+            </summary>
+        </member>
+        <member name="M:HumanBytes.ByteSize.#ctor(System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HumanBytes.ByteSize"/> struct.
+            </summary>
+            <param name="value">The size in bytes.</param>
+        </member>
+        <member name="M:HumanBytes.ByteSize.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+            <remarks>
+            The size is formatted to a human readable format using the default formatter (<see cref="P:HumanBytes.ByteSizeFormatter.Default"/>).
+            </remarks>
+        </member>
+        <member name="M:HumanBytes.ByteSize.ToString(HumanBytes.ByteSizeFormatter)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance, using the specified formatter.
+            </summary>
+            <param name="formatter">The formatter to use.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><c>formatter</c> is null.</exception>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Int64)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int64"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.UInt64)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt64"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Int32)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.UInt32)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt32"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Int16)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int16"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.UInt16)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.UInt16"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Byte)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Byte"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.SByte)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.SByte"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Double)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Double"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Single)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Single"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:HumanBytes.ByteSize.op_Implicit(System.Decimal)~HumanBytes.ByteSize">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Decimal"/> to <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="P:HumanBytes.ByteSize.Value">
+            <summary>
+            Gets the size in bytes.
+            </summary>
+            <value>
+            The size in bytes.
+            </value>
+        </member>
+        <member name="T:HumanBytes.ByteSizeExtensions">
+            <summary>
+            Provide extension methods to convert numeric values to instances of <see cref="T:HumanBytes.ByteSize"/>.
+            </summary>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Int64)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.UInt64)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Int32)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.UInt32)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Int16)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.UInt16)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Byte)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.SByte)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Double)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Single)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="M:HumanBytes.ByteSizeExtensions.Bytes(System.Decimal)">
+            <summary>
+            Returns an instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.
+            </summary>
+            <param name="value">The size in bytes.</param>
+            <returns>An instance of <see cref="T:HumanBytes.ByteSize"/> that represents the specified size.</returns>
+        </member>
+        <member name="T:HumanBytes.ByteSizeConvention">
+            <summary>
+            Defines the conventions used for byte size units
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeConvention.Customary">
+            <summary>
+            Customary convention : binary multiples (1024), decimal prefixes (K/M/G...).
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeConvention.Binary">
+            <summary>
+            Binary convention : binary multiples (1024), binary prefixes (Ki/Mi/Gi...).
+            Same as IEC.
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeConvention.Decimal">
+            <summary>
+            Decimal convention : decimal multiples (1000), decimal prefixes (K/M/G...).
+            Same as SI.
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeConvention.IEC">
+            <summary>
+            IEC 60027 convention : binary multiples (1024), binary prefixes (Ki/Mi/Gi...).
+            Same as Binary.
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeConvention.SI">
+            <summary>
+            International System of Units convention : decimal multiples (1000), decimal prefixes (K/M/G...).
+            Same as Decimal.
+            </summary>
+        </member>
+        <member name="T:HumanBytes.ByteSizeFormatter">
+            <summary>
+            A formatter that converts a byte size to a human readable string.
+            </summary>
+        </member>
+        <member name="M:HumanBytes.ByteSizeFormatter.#ctor">
+            <summary>
+            Initializes a new instance of ByteSizeFormatter
+            </summary>
+        </member>
+        <member name="M:HumanBytes.ByteSizeFormatter.Format(System.Int64)">
+            <summary>
+            Formats the specified size.
+            </summary>
+            <param name="size">The size to format.</param>
+            <returns>The formatted size.</returns>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.Convention">
+            <summary>
+            Gets or sets the unit naming convention for this formatter.
+            </summary>
+            <value>The unit naming convention for this formatter. The default value is ByteSizeConvention.Customary.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.Culture">
+            <summary>
+            Gets or sets the culture used to format the byte size.
+            </summary>
+            <value>The culture used to format the byte size, or null to use the current culture. The default value is null.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.DecimalPlaces">
+            <summary>
+            Gets or sets the number of decimal places in the formatted size.
+            </summary>
+            <value>The number of decimal places in the formatted size. The default value is 0.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.NumberFormat">
+            <summary>
+            Gets or sets the number format used to format the size.
+            </summary>
+            <value>The number format used to format the size. The default value is "#,##0.###".</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.MinUnit">
+            <summary>
+            Gets or sets the smallest unit used by the formatter.
+            </summary>
+            <value>The smallest unit used by the formatter. The default value is ByteSizeUnit.Byte.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.MaxUnit">
+            <summary>
+            Gets or sets the largest unit used by the formatter.
+            </summary>
+            <value>The largest unit used by the formatter. The default value is ByteSizeUnit.ExaByte.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.RoundingRule">
+            <summary>
+            Gets or sets the rounding rule used by the formatter.
+            </summary>
+            <value>The rounding rule used by the formatter. The default value is ByteSizeRounding.Closest.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.UseFullWordForBytes">
+            <summary>
+             Gets or sets a value indicating whether sizes under 1KB/1KiB are formatted using
+             the full unabbreviated "byte" word.
+            </summary>
+             <value>true to use the unabbreviated word "byte" for sizes under 1KB/1KiB,
+             false to use the abbreviation. The default value is true.</value>
+        </member>
+        <member name="P:HumanBytes.ByteSizeFormatter.Default">
+            <summary>
+            Returns a default instance of ByteSizeFormatter. This formatter will be used by the ByteSize.ToString() method.
+            </summary>
+        </member>
+        <member name="T:HumanBytes.ByteSizeRounding">
+            <summary>
+            Defines rounding rules for byte sizes
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeRounding.Closest">
+            <summary>
+            Rounded to the closest value
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeRounding.Down">
+            <summary>
+            Rounded to the lower value
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeRounding.Up">
+            <summary>
+            Rounded to the upper value
+            </summary>
+        </member>
+        <member name="T:HumanBytes.ByteSizeUnit">
+            <summary>
+            Defines units for byte sizes
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Byte">
+            <summary>
+            Byte
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Kilobyte">
+            <summary>
+            kilobyte, or kibibyte in the binary convention
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Megabyte">
+            <summary>
+            megabyte, or mebibyte in the binary convention
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Gigabyte">
+            <summary>
+            gigabyte, or gibibyte in the binary convention
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Terabyte">
+            <summary>
+            terabyte, or tebibyte in the binary convention
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Petabyte">
+            <summary>
+            petabyte, or pebibyte in the binary convention
+            </summary>
+        </member>
+        <member name="F:HumanBytes.ByteSizeUnit.Exabyte">
+            <summary>
+            exabyte, or exbibyte in the binary convention
+            </summary>
+        </member>
+        <member name="T:HumanBytes.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:HumanBytes.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:HumanBytes.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:HumanBytes.Properties.Resources.BytesWord">
+            <summary>
+              Looks up a localized string similar to bytes.
+            </summary>
+        </member>
+        <member name="P:HumanBytes.Properties.Resources.ByteSymbol">
+            <summary>
+              Looks up a localized string similar to B.
+            </summary>
+        </member>
+        <member name="P:HumanBytes.Properties.Resources.ByteWord">
+            <summary>
+              Looks up a localized string similar to byte.
+            </summary>
+        </member>
+    </members>
+</doc>
