@@ -33,7 +33,7 @@ namespace TestApp
             var dialog = new CommonOpenFileDialog();
             dialog.IsFolderPicker = true;
             CommonFileDialogResult result = dialog.ShowDialog();
-            folder1.Text = dialog.FileName.ToString();
+            folder1.Text = dialog?.FileName?.ToString()??"";
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace TestApp
             var dialog = new CommonOpenFileDialog();
             dialog.IsFolderPicker = true;
             CommonFileDialogResult result = dialog.ShowDialog();
-            folder2.Text = dialog.FileName.ToString();
+            folder2.Text = dialog?.FileName?.ToString()??"";
         }
 
         private void button_Copy1_Click(object sender, RoutedEventArgs e)
